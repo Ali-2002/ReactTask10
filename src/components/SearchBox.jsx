@@ -7,7 +7,7 @@ const SearchBar = ({ state, setSearchResults }) => {
     const handleSearchChange = (e) => {
         if (!e.target.value) return setSearchResults(state)
 
-        const resultsArray = state.filter(item => item.title.includes(e.target.value) || item.body.includes(e.target.value))
+        const resultsArray = state.filter(item => item.name.toLowerCase().includes(e.target.value) || item.role.toLowerCase().includes(e.target.value))
 
         setSearchResults(resultsArray)
     }

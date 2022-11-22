@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import SearchBar from './SearchBar'
+import SearchBox from './SearchBox'
 import ListPage from './ListPage'
 import { getUsers } from '../api/axios'
 const Search = () => {
@@ -16,7 +16,7 @@ const Search = () => {
     },[])
   return (
     <>
-      <SearchBar state={state} setSearchResults={setSearchResults} />
+      <SearchBox state={state} setSearchResults={setSearchResults} />
       <ListPage searchResults={searchResults} />
     </>
   )
